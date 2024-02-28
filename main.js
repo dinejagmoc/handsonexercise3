@@ -1,53 +1,19 @@
-const str1Input = document.getElementById("str1");
-const arrTxt = document.getElementById("arrTxt");
-const sumTxt = document.getElementById("sumTxt");
-const highestTxt = document.getElementById("highestTxt");
-const lowestTxt = document.getElementById("lowestTxt");
+const str1Txt = document.getElementById("str1");
+const str2Txt = document.getElementById("str2");
+const str3Txt = document.getElementById("str3");
+const concatTxt = document.getElementById("concatTxt");
 
-let numbers = [];
-
-function Insert() {
-    const inputNumber = parseFloat(str1Input.value);
-
-    if (!isNaN(inputNumber)) {
-        numbers.push(inputNumber);
-        updateDisplay();
+function GenerateFullname() {
+    if (str1Txt.value == "" || str2Txt.value == "" || str3Txt.value == "") {
+        alert("You should fill out all the entries");
     } else {
-        alert("Please enter a valid number.");
-    }
-
-    str1Input.value = "";
-}
-
-function DeleteAll() {
-    numbers = [];
-    updateDisplay();
-}
-
-function updateDisplay() {
-    arrTxt.textContent = numbers.join(", ");
-    
-    if (numbers.length > 0) {
-        sumTxt.textContent = calculateSum();
-        highestTxt.textContent = findHighest();
-        lowestTxt.textContent = findLowest();
-    } else {
-        sumTxt.textContent = "";
-        highestTxt.textContent = "";
-        lowestTxt.textContent = "";
+        concatTxt.innerHTML = str1Txt.value + " " + str2Txt.value + " " + str3Txt.value;
     }
 }
 
-
-
-function calculateSum() {
-    return numbers.reduce((sum, num) => sum + num, 0);
-}
-
-function findHighest() {
-    return numbers.length > 0 ? Math.max(...numbers) : "";
-}
-
-function findLowest() {
-    return numbers.length > 0 ? Math.min(...numbers) : "";
+function clearEntries() {
+    str1Txt.value = "";
+    str2Txt.value = "";
+    str3Txt.value = "";
+    concatTxt.innerHTML = "";
 }

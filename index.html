@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS Exercise 3 </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Exercise 3</title>
 </head>
 <body>
-    <h1>JS Exercise 3</h1>
-    <table>
+    <h1>JS Exercise 2</h1>
+
         <tr>
             <td>
-                <label for="num">Enter a Number: </label>
+                <label for="str1">Enter a Number: </label>
             </td>
             <td>
-                <input type="number" name="num" id="num" placeholder="">
+                <input type="text" name="str1" id="str1" placeholder="Enter a Number">
             </td>
         </tr>
+
         <tr>
             <td></td>
-            <td><br>
-                <button onclick="Insert()">Insert</button>
-                <button onclick="DeleteAll()">Delete All</button>
+            <td>
+                <br>
+                <br>
+                <button onclick="Insert()"> Insert</button>
+                <button onclick="DeleteAll()"> Delete All</button>
+                <br>
+                <br>
             </td>
         </tr>
-    </table>
+</table>
 
-    <p>Numbers:<span id="numbers"></span></p><br>
-    <p> Sum:<span id="sumTxt" ></span></p>
-    <p>Highest:<span id="highestTxt" > </span></p>
-    <p>Lowest:<span id="lowestTxt" > </span></p>
+    <p>Numbers: <span id="arrTxt"></span></p>
+    <p>Sum: <span id="sumTxt"></span></p>
+    <p>Highest: <span id="highestTxt"></span></p>
+    <p>Lowest: <span id="lowestTxt"></span></p>
 
     <script src="main.js"></script>
 </body>
